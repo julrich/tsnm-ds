@@ -1,3 +1,6 @@
 // how would using the decorator work here? Seemed not to work
-import '@kickstartds/design-system/dist/index.css';
-import '@kickstartds/design-system/dist/index.js';
+import '@kickstartds/core/lib/design-tokens/tokens.css';
+import '@kickstartds/base/lib/global/base.js';
+import '@kickstartds/base/lib/global/base.css';
+
+import '~/colors/src/tokens.css';

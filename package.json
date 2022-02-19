@@ -15,8 +15,9 @@
   "dependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "@kickstartds/design-system": "^1.11.12",
-    "@kickstartds/core": "^1.5.0",
-    "@kickstartds/base": "^1.5.1"
+    "@kickstartds/core": "^1.6.0-next.9",
+    "@kickstartds/base": "^1.6.0-next.9",
+    "@kickstartds/blog": "^1.6.0-next.9",
+    "@kickstartds/content": "^1.6.0-next.9"
   }
 }
