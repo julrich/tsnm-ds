@@ -1,0 +1,45 @@
+import { mdx } from '@mdx-js/react';
+import { TeaserBox } from '../src/TeaserBox';
+import { Props, Description } from '@divriots/dockit-react/props';
+import { Playground } from '@divriots/dockit-react/playground';
+import { Layout } from '~/mdx-layout/src/mdx-layout';
+export default Layout;
+
+# TeaserBox
+
+<Description of={TeaserBox} />
+
+## Usage
+
+```tsx
+import { TeaserBox } from '@backlight-dev/selection-inventory-n5vl9.blank-kzk2liwl"';
+
+<TeaserBox
+  topic="Lorem"
+  text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ispum dolor distinctio minima unde voluptatum aut. Lorem ipsum dolor sit amet."
+  image="https://picsum.photos/seed/kdsteaserbox/500/300"
+/>;
+```
+
+## Component
+
+<Playground
+  scope={{ TeaserBox }}
+  code={`
+<TeaserBox topic="Lorem" text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ispum dolor distinctio minima unde voluptatum aut. Lorem ipsum dolor sit amet." image="https://picsum.photos/seed/kdsteaserbox/500/300" />
+  `}
+/>
+
+## Variants
+
+<Playground
+  scope={{ TeaserBox }}
+  code={`
+<TeaserBox topic="Light" image="https://picsum.photos/seed/kdsteaserbox/500/300" />
+<TeaserBox topic="Dark" image="https://picsum.photos/seed/kdsteaserbox/500/300" darkStyle />
+  `}
+/>
+
+## Props
+
+<Props of={TeaserBox} />
