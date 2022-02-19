@@ -6,8 +6,9 @@ import '@divriots/dockit-react/style.css';
 import '~/mdx-layout/src/styleshowcase.css';
 import '~/mdx-layout/src/docs.scss';
 
-import '@kickstartds/design-system/dist/index.css';
-import '@kickstartds/design-system/dist/index.js';
+import '@kickstartds/core/lib/design-tokens/tokens.css';
+import '@kickstartds/base/lib/global/base.js';
+import '@kickstartds/base/lib/global/base.css';
 
 import '~/colors/src/tokens.css';
 

@@ -1,4 +1,3 @@
-import { IconSprite } from '@kickstartds/design-system/dist/components/icon-sprite/IconSpriteComponent';
 import ButtonStories, {
   Template,
 } from '@kickstartds/base/lib/button/button.stories';
@@ -12,7 +11,6 @@ export default {
   decorators: [
     (Story) => (
       <>
-        <IconSprite />
         <Story />
       </>
     ),
