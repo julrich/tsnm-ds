@@ -1,8 +1,9 @@
 import * as React from 'react';
+
 import {
   Button as KDSButton,
   ButtonProps as KDSButtonProps,
-} from '@kickstartds/base/lib/button/index.js';
+} from '@kickstartds/base/lib/button';
 
 export type ButtonProps = KDSButtonProps;
 

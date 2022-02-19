@@ -1,8 +1,9 @@
 import * as React from 'react';
+
 import {
   TeaserBox as KDSTeaserBox,
   TeaserBoxProps as KDSTeaserBoxProps,
-} from '@kickstartds/base/lib/teaser-box/index.js';
+} from '@kickstartds/base/lib/teaser-box';
 
 export type TeaserBoxProps = KDSTeaserBoxProps;
 
