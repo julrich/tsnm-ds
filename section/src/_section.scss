@@ -122,17 +122,6 @@
       z-index: 0;
     }
 
-    &--dark {
-      &::before {
-        background-image: url(logo-graphic.svg);
-        content: '';
-      }
-      &::after {
-        background-image: url(logo-graphic.svg);
-        content: '';
-      }
-    }
-
     &--1 {
       &::before {
         $deko-size: var(--l-section--deko-size-l);
