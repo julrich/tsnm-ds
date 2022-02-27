@@ -1,0 +1,201 @@
+// TODO this should use the imports from @kickstartDS and include-media again
+@use 'section-tokens';
+@use 'breakpoints';
+
+.l-section {
+  position: relative;
+
+  &--slider {
+    overflow: auto;
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: red; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+
+    &__arrows {
+      display: flex;
+      gap: var(--spacing-s);
+      justify-content: center;
+      margin-top: var(--spacing-l);
+
+      .c-button--slider-arrow {
+        padding: var(--spacing-s);
+        // --c-button--color: var(--color-primary);
+        // --c-button--color-hover: var(--color-primary);
+        // --c-button--background-color: transparent;
+        // --c-button--background-color-hover: var(--color-primary-lighter-8);
+      }
+    }
+
+    img {
+      pointer-events: none;
+    }
+
+    &__slide {
+      transition-duration: var(--g-transition-duration-s);
+      transition-property: opacity, transform;
+      min-width: calc(80% - var(--g-content-padding));
+      padding-right: var(--l-section_container--gutter);
+
+      @include breakpoints.media('>s') {
+        min-width: var(--l-section_col--min-width);
+      }
+
+      .c-teaser {
+        transform: perspective(60rem) rotateX(3deg) rotateY(10deg);
+      }
+
+      &:nth-child(2) {
+        transition-delay: var(--g-transition-delay-s);
+
+        .c-teaser {
+          transform: perspective(100rem) rotateX(0deg) rotateY(-8deg);
+        }
+      }
+
+      &:nth-child(3) {
+        transition-delay: calc(var(--g-transition-delay-s) * 2);
+        .c-teaser {
+          transform: perspective(100rem) rotateX(-5deg) rotateY(6deg);
+        }
+      }
+
+      &:nth-child(4) {
+        transition-delay: calc(var(--g-transition-delay-s) * 3);
+        .c-teaser {
+          transform: perspective(100rem) rotateX(-2deg) rotateY(-6deg);
+        }
+      }
+
+      &:nth-child(5) {
+        transition-delay: calc(var(--g-transition-delay-s) * 4);
+        .c-teaser {
+          transform: perspective(100rem) rotateX(-5deg) rotateY(5deg);
+        }
+      }
+
+      &:nth-child(6) {
+        transition-delay: calc(var(--g-transition-delay-s) * 5);
+        .c-teaser {
+          transform: perspective(60rem) rotateX(3deg) rotateY(-10deg);
+        }
+      }
+
+      &:nth-child(even) > * {
+        transform: translateY(var(--spacing-xl));
+      }
+    }
+  }
+
+  &__container--slider {
+    padding-top: var(--spacing-s);
+    overflow: visible;
+    display: flex;
+    margin-bottom: var(--spacing-xl);
+    grid-gap: 0;
+  }
+
+  &__pattern {
+    overflow: hidden;
+    position: relative;
+    overflow-y: visible;
+    z-index: 1;
+
+    .l-section__container {
+      z-index: 1;
+      position: relative;
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      pointer-events: none;
+      background-repeat: no-repeat;
+    }
+
+    &::after {
+      z-index: 0;
+    }
+
+    &--dark {
+      &::before {
+        background-image: url(logo-graphic.svg);
+        content: '';
+      }
+      &::after {
+        background-image: url(logo-graphic.svg);
+        content: '';
+      }
+    }
+
+    &--1 {
+      &::before {
+        $deko-size: var(--l-section--deko-size-l);
+        $deko-offset: var(--l-section--deko-offset-l);
+
+        left: 0;
+        bottom: 1em;
+        background-position-x: calc($deko-size * calc($deko-offset) * -1);
+        width: $deko-size;
+        height: $deko-size;
+
+        @include breakpoints.media('>s') {
+          bottom: 0;
+        }
+
+        @media (min-width: 130em) {
+          // background-position-x: center;
+          // left: 1%;
+        }
+      }
+
+      &::after {
+        $deko-size: var(--l-section--deko-size-s);
+        $deko-offset: var(--l-section--deko-offset-s);
+
+        background-position-x: calc($deko-size * $deko-offset);
+        top: 10%;
+        right: 0;
+        width: $deko-size;
+        height: $deko-size;
+
+        @media (min-width: 130em) {
+          // right: 10%;
+          // background-position-x: center;
+        }
+      }
+    }
+
+    &--2 {
+      &::before {
+        $deko-size: var(--l-section--deko-size-l);
+        $deko-offset: var(--l-section--deko-offset-m);
+        opacity: 20%;
+
+        background-position-x: calc($deko-size * $deko-offset);
+        bottom: 0%;
+        right: 0;
+        width: $deko-size;
+        height: $deko-size;
+      }
+    }
+  }
+
+  &--indent {
+    .l-section__container {
+      &:not(:first-child) {
+        > * {
+          @include breakpoints.media('>s') {
+            margin-left: auto;
+            max-width: 55%;
+          }
+        }
+      }
+    }
+  }
+}

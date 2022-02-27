@@ -1,6 +1,6 @@
 import { Component, define } from '@kickstartds/core/lib/core';
 
-const identifier = 'encore.section-slider';
+const identifier = 'tsnm.section-slider';
 class SectionSlider extends Component {
   static identifier = identifier;
 

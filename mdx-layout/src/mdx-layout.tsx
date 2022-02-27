@@ -2,6 +2,8 @@ import React from 'react';
 import { MDXProvider } from '@mdx-js/react';
 import { CoreLayout } from '@divriots/dockit-react/mdx-layout-core';
 
+import { IconSprite } from '~/icon-sprite/src/IconSprite';
+
 import '@divriots/dockit-react/style.css';
 import '~/mdx-layout/src/styleshowcase.css';
 import '~/mdx-layout/src/docs.scss';
@@ -14,6 +16,7 @@ import '~/colors/src/tokens.css';
 
 export const Layout = (props) => (
   <MDXProvider>
+    <IconSprite />
     <CoreLayout
       logo={
         <div className="logo">

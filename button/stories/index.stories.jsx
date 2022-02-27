@@ -1,72 +1,69 @@
 import ButtonStories, {
   Template,
 } from '@kickstartds/base/lib/button/button.stories';
-import { pack } from '@kickstartds/core/lib/storybook/helpers';
+
+import { IconSpriteDecorator } from '~/icon-sprite/src/IconSpriteDecorator';
+
 export default {
   ...ButtonStories,
   title: 'Base/Button',
   parameters: {
     layout: 'centered',
   },
-  decorators: [
-    (Story) => (
-      <>
-        <Story />
-      </>
-    ),
-  ],
+  decorators: [IconSpriteDecorator],
 };
+
 export const Solid = Template.bind({});
-Solid.args = pack({
+Solid.args = {
   variant: 'solid',
   href: '#',
-  label: 'mehr erfahren',
-});
+  label: 'Learn more',
+};
 
 export const SolidMain = Template.bind({});
-SolidMain.args = pack({
+SolidMain.args = {
   className: 'c-button--main',
   variant: 'solid',
   href: '#',
   label: 'Request a guided demo',
-});
+};
 
-export const MitIcon = Template.bind({});
-MitIcon.args = pack({
+export const WithIcon = Template.bind({});
+WithIcon.args = {
   ...Solid.args,
   iconAfter: true,
   icon: {
     icon: 'chevron-right',
   },
-});
+};
 
 export const Inverted = Template.bind({});
-Inverted.args = pack({
+Inverted.args = {
   ...Solid.args,
   variant: 'solid-inverted',
   href: '#',
-});
+};
 Inverted.parameters = {
   backgrounds: { default: 'dark' },
 };
 
 export const Outline = Template.bind({});
-Outline.args = pack({
+Outline.args = {
   ...Solid.args,
   variant: 'outline',
-});
+};
 
 export const OutlineInverted = Template.bind({});
-OutlineInverted.args = pack({
+OutlineInverted.args = {
   ...Solid.args,
   variant: 'outline-inverted',
-});
+};
 OutlineInverted.parameters = {
   backgrounds: { default: 'dark' },
 };
 
 export const Ghost = Template.bind({});
-Ghost.args = pack({
+Ghost.args = {
   ...Solid.args,
   variant: 'clear',
-});
+};
