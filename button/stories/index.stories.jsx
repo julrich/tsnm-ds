@@ -2,19 +2,22 @@ import ButtonStories, {
   Template,
 } from '@kickstartds/base/lib/button/button.stories';
 
+import { IconSpriteDecorator } from '~/icon-sprite/src/IconSpriteDecorator';
+
 export default {
   ...ButtonStories,
   title: 'Base/Button',
   parameters: {
     layout: 'centered',
   },
+  decorators: [IconSpriteDecorator],
 };
 
 export const Solid = Template.bind({});
 Solid.args = {
   variant: 'solid',
   href: '#',
-  label: 'mehr erfahren',
+  label: 'Learn more',
 };
 
 export const SolidMain = Template.bind({});
@@ -25,8 +28,8 @@ SolidMain.args = {
   label: 'Request a guided demo',
 };
 
-export const MitIcon = Template.bind({});
-MitIcon.args = {
+export const WithIcon = Template.bind({});
+WithIcon.args = {
   ...Solid.args,
   iconAfter: true,
   icon: {

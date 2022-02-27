@@ -1,11 +1,13 @@
 import { TeaserBox } from '~/teaser-box/src/TeaserBox';
 import { Section } from '../src/Section';
+import { IconSpriteDecorator } from '~/icon-sprite/src/IconSpriteDecorator';
 
 import sectionStories from '@kickstartds/base/lib/section/section.stories';
 
 export default {
   ...sectionStories,
   title: 'Layout/Section',
+  decorators: [IconSpriteDecorator],
 };
 
 const boxes = [

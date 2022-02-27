@@ -2,19 +2,15 @@ import TeaserBoxStories, {
   Template,
 } from '@kickstartds/base/lib/teaser-box/teaser-box.stories';
 
+import { IconSpriteDecorator } from '~/icon-sprite/src/IconSpriteDecorator';
+
 export default {
   ...TeaserBoxStories,
   title: 'Base/TeaserBox',
   parameters: {
     layout: 'centered',
   },
-  decorators: [
-    (Story) => (
-      <>
-        <Story />
-      </>
-    ),
-  ],
+  decorators: [IconSpriteDecorator],
 };
 export const Linked = Template.bind({});
 Linked.args = {
