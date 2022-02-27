@@ -1,0 +1,78 @@
+@use '@kickstartds/core/source/core/breakpoint';
+
+.l-section {
+  --l-section--space: var(--g-section-space);
+  --l-section--space-small: var(--g-section-space-small);
+
+  --l-section--deko-size-xs: 20vw;
+  --l-section--deko-size-s: 40vw;
+  --l-section--deko-size-m: 50vw;
+  --l-section--deko-size-l: 100vw;
+  --l-section--deko-size-xl: 175vw;
+
+  @include breakpoint.media('>s') {
+    --l-section--deko-size-xs: 10vw;
+    --l-section--deko-size-s: 20vw;
+    --l-section--deko-size-m: 30vw;
+    --l-section--deko-size-l: 40vw;
+    --l-section--deko-size-xl: 70vw;
+  }
+
+  @media (min-width: 130em) {
+    --l-section--deko-size-xs: 10vw;
+    --l-section--deko-size-s: 15vw;
+    --l-section--deko-size-m: 20vw;
+    --l-section--deko-size-l: 30vw;
+    --l-section--deko-size-xl: 40vw;
+  }
+
+  --l-section--deko-offset-xs: 0.75;
+  --l-section--deko-offset-s: 0.8;
+  --l-section--deko-offset-m: 0.85;
+  --l-section--deko-offset-l: 0.9;
+  --l-section--deko-offset-xl: 0.95;
+
+  @include breakpoint.media('>s') {
+    --l-section--deko-offset-xs: 0.1;
+    --l-section--deko-offset-s: 0.25;
+    --l-section--deko-offset-m: 0.55;
+    --l-section--deko-offset-l: 0.75;
+    --l-section--deko-offset-xl: 0.875;
+  }
+
+  &--dark {
+    --l-section--background: var(--color-secondary);
+    --g-headline--color: var(--color-white);
+    --g-topic--color: var(--color-white);
+    --g-copy--color: var(--color-white);
+    --g-link--color: var(--color-white);
+  }
+
+  &--dark {
+    --l-section--background: var(--color-terciary);
+  }
+
+  &--accent {
+    --l-section--background: var(--color-primary-lighter-8);
+  }
+
+  &__container {
+    .l-section--slider & {
+      @include breakpoint.media('>s') {
+        --l-section_col--min-width: 16rem;
+      }
+
+      @include breakpoint.media('>m') {
+        --l-section_col--min-width: 24rem;
+      }
+
+      @include breakpoint.media('>l') {
+        --l-section_col--min-width: 24rem;
+      }
+
+      @include breakpoint.media('>xl') {
+        --l-section_col--min-width: 28rem;
+      }
+    }
+  }
+}

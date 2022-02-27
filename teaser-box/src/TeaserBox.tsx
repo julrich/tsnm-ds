@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import './teaser-box.scss';
+
 import {
   TeaserBox as KDSTeaserBox,
   TeaserBoxProps as KDSTeaserBoxProps,

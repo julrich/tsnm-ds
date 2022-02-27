@@ -1,7 +1,7 @@
 import TeaserBoxStories, {
   Template,
 } from '@kickstartds/base/lib/teaser-box/teaser-box.stories';
-import { pack } from '@kickstartds/core/lib/storybook/helpers';
+
 export default {
   ...TeaserBoxStories,
   title: 'Base/TeaserBox',
@@ -17,7 +17,7 @@ export default {
   ],
 };
 export const Linked = Template.bind({});
-Linked.args = pack({
+Linked.args = {
   ratio: '16:9',
   topic: 'Lorem Ipsum',
   text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ispum dolor distinctio minima unde voluptatum aut. Lorem ipsum dolor sit amet.',
@@ -26,20 +26,20 @@ Linked.args = pack({
     label: 'Mehr erfahren',
     hidden: true,
   },
-});
+};
 
 export const Button = Template.bind({});
-Button.args = pack({
+Button.args = {
   ...Linked.args,
   link: {
     variant: 'solid',
     label: 'mehr erfahren',
     hidden: false,
   },
-});
+};
 
 export const Dark = Template.bind({});
-Dark.args = pack({
+Dark.args = {
   ...Linked.args,
   link: {
     variant: 'solid-inverted',
@@ -47,4 +47,4 @@ Dark.args = pack({
     hidden: false,
   },
   darkStyle: true,
-});
+};

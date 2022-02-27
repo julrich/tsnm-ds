@@ -8,6 +8,8 @@ import {
 import { Button } from '@kickstartds/base/lib/button';
 import './SectionSlider.js';
 
+import './_section.scss';
+
 export type SectionProps = KDSSectionProps;
 
 /**
@@ -37,7 +39,7 @@ export const Section = ({ width, background, ...props }) => {
         ) : null}
         <SectionContextDefault
           className={classNames(className, 'l-section--slider', 'lazyload')}
-          data-component="encore.section-slider"
+          data-component="tsnm.section-slider"
           data-expand="-250"
           mode={mode}
           spaceBefore={headline && headline.content ? 'none' : spaceBefore}

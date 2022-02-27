@@ -16,9 +16,24 @@ export default Layout;
 import { Section } from '@backlight-dev/selection-inventory-n5vl9.blank-kzk2liwl"';
 
 <Section>
-  <TeaserBox topic="Lorem" text="ipsum" />
-  <TeaserBox topic="Lorem" text="ipsum" />
-  <TeaserBox topic="Lorem" text="ipsum" />
+  <TeaserBox
+    ratio="16:9"
+    image="https://source.unsplash.com/random/400x400/?pattern"
+    topic="Lorem"
+    text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt."
+  />
+  <TeaserBox
+    ratio="16:9"
+    image="https://source.unsplash.com/random/400x400/?pattern"
+    topic="Lorem"
+    text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt."
+  />
+  <TeaserBox
+    ratio="16:9"
+    image="https://source.unsplash.com/random/400x400/?pattern"
+    topic="Lorem"
+    text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt."
+  />
 </Section>;
 ```
 
@@ -28,9 +43,22 @@ import { Section } from '@backlight-dev/selection-inventory-n5vl9.blank-kzk2liwl
   scope={{ Section, TeaserBox }}
   code={`
 <Section>
-  <TeaserBox topic="Lorem" text="ipsum" />
-  <TeaserBox topic="Lorem" text="ipsum" />
-  <TeaserBox topic="Lorem" text="ipsum" />
+  <TeaserBox ratio="16:9" image="https://source.unsplash.com/random/400x400/?pattern" topic="Teaser topic" text="**Teaser text**: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt." />
+  <TeaserBox ratio="16:9" image="https://source.unsplash.com/random/400x400/?pattern" topic="Teaser topic" text="**Teaser text**: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt." />
+  <TeaserBox ratio="16:9" image="https://source.unsplash.com/random/400x400/?pattern" topic="Teaser topic" text="**Teaser text**: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt." />
+</Section>
+  `}
+/>
+
+## Slider Layout
+
+<Playground
+  scope={{ Section, TeaserBox }}
+  code={`
+<Section mode="slider">
+  <TeaserBox darkStyle image="https://source.unsplash.com/random/400x400/?pattern" topic="Teaser topic" text="**Teaser text**: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt." />
+  <TeaserBox darkStyle image="https://source.unsplash.com/random/400x400/?pattern" topic="Teaser topic" text="**Teaser text**: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt." />
+  <TeaserBox darkStyle image="https://source.unsplash.com/random/400x400/?pattern" topic="Teaser topic" text="**Teaser text**: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt." />
 </Section>
   `}
 />
