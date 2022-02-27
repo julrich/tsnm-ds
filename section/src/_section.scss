@@ -1,5 +1,5 @@
 @use 'section-tokens';
-@use '/node_modules/@kickstartds/core/source/core/_breakpoint.scss';
+@use 'breakpoints';
 
 .l-section {
   position: relative;
@@ -41,7 +41,7 @@
       min-width: calc(80% - var(--g-content-padding));
       padding-right: var(--l-section_container--gutter);
 
-      @include breakpoint.media('>s') {
+      @include breakpoints.media('>s') {
         min-width: var(--l-section_col--min-width);
       }
 
@@ -143,7 +143,7 @@
         width: $deko-size;
         height: $deko-size;
 
-        @include breakpoint.media('>s') {
+        @include breakpoints.media('>s') {
           bottom: 0;
         }
 
@@ -189,7 +189,7 @@
     .l-section__container {
       &:not(:first-child) {
         > * {
-          @include breakpoint.media('>s') {
+          @include breakpoints.media('>s') {
             margin-left: auto;
             max-width: 55%;
           }

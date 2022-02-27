@@ -1,4 +1,4 @@
-@use '/node_modules/@kickstartds/core/source/core/_breakpoint.scss';
+@use 'breakpoints';
 
 .l-section {
   --l-section--space: var(--g-section-space);
@@ -10,7 +10,7 @@
   --l-section--deko-size-l: 100vw;
   --l-section--deko-size-xl: 175vw;
 
-  @include breakpoint.media('>s') {
+  @include breakpoints.media('>s') {
     --l-section--deko-size-xs: 10vw;
     --l-section--deko-size-s: 20vw;
     --l-section--deko-size-m: 30vw;
@@ -32,7 +32,7 @@
   --l-section--deko-offset-l: 0.9;
   --l-section--deko-offset-xl: 0.95;
 
-  @include breakpoint.media('>s') {
+  @include breakpoints.media('>s') {
     --l-section--deko-offset-xs: 0.1;
     --l-section--deko-offset-s: 0.25;
     --l-section--deko-offset-m: 0.55;
@@ -58,19 +58,19 @@
 
   &__container {
     .l-section--slider & {
-      @include breakpoint.media('>s') {
+      @include breakpoints.media('>s') {
         --l-section_col--min-width: 16rem;
       }
 
-      @include breakpoint.media('>m') {
+      @include breakpoints.media('>m') {
         --l-section_col--min-width: 24rem;
       }
 
-      @include breakpoint.media('>l') {
+      @include breakpoints.media('>l') {
         --l-section_col--min-width: 24rem;
       }
 
-      @include breakpoint.media('>xl') {
+      @include breakpoints.media('>xl') {
         --l-section_col--min-width: 28rem;
       }
     }
