@@ -8,7 +8,9 @@ $breakpoints: (
   xl: 75em,
 );
 
-@forward 'include-media/dist/include-media' with (
+// TODO this should be changed back to:
+// @forward 'include-media/dist/include-media' with (
+@forward 'include-media' with (
   $breakpoints: $breakpoints
 );
 
