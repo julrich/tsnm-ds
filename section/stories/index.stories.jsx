@@ -1,13 +1,13 @@
+import { pack } from '@kickstartds/core/lib/storybook/helpers';
+
 import { TeaserBox } from '~/teaser-box/src/TeaserBox';
 import { Section } from '../src/Section';
-import { IconSpriteDecorator } from '~/icon-sprite/src/IconSpriteDecorator';
 
 import sectionStories from '@kickstartds/base/lib/section/section.stories';
 
 export default {
   ...sectionStories,
   title: 'Layout/Section',
-  decorators: [IconSpriteDecorator],
 };
 
 const boxes = [
@@ -46,17 +46,17 @@ const SliderTemplate = (args) => (
 );
 
 export const Default = SliderTemplate.bind({});
-Default.args = {
+Default.args = pack({
   mode: 'default',
   headline: {
     align: 'left',
   },
-};
+});
 
 export const Slider = SliderTemplate.bind({});
-Slider.args = {
+Slider.args = pack({
   mode: 'slider',
   headline: {
     align: 'left',
   },
-};
+});
