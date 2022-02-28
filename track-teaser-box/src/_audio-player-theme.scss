@@ -1,0 +1,26 @@
+// TODO use design tokens here, or re-use SASS helpers / variables from core?
+$rhap_theme-color: var(
+  --color-secondary
+); // Color of all buttons and volume/progress indicators
+$rhap_background-color: var(
+  --color-primary-darker-3
+); // Color of the player background
+$rhap_bar-color: var(
+  --color-secondary-darker-1
+); // Color of volume and progress bar
+$rhap_time-color: var(
+  --color-secondary
+); // Font color of current time and duration
+$rhap_font-family: inherit; // Font family of current time and duration
+
+@import 'react-h5-audio-player/src/styles.scss';
+
+.rhap_time {
+  font-size: 12px;
+}
+
+.rhap_progress-indicator {
+  width: 12px;
+  height: 12px;
+  top: -3px;
+}
