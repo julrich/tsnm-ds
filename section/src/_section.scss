@@ -25,6 +25,7 @@
 
       .c-button--slider-arrow {
         padding: var(--spacing-xs);
+        color: var(--color-primary-darker-3);
       }
     }
 
@@ -35,51 +36,38 @@
     &__slide {
       transition-duration: var(--g-transition-duration-s);
       transition-property: opacity, transform;
-      min-width: calc(85% - var(--g-content-padding));
+      //min-width: calc(85% - var(--g-content-padding));
       padding-right: var(--l-section_container--gutter);
 
       @include breakpoints.media('>s') {
-        min-width: calc(var(--l-section_col--min-width) * 0.6);
+        //min-width: calc(var(--l-section_col--min-width) * 0.6);
       }
 
-      .c-teaser {
-        transform: perspective(60rem) rotateX(3deg) rotateY(10deg);
-      }
+      transform: perspective(60rem) rotateX(3deg) rotateY(10deg);
 
       &:nth-child(2) {
         transition-delay: var(--g-transition-delay-s);
-
-        .c-teaser {
-          transform: perspective(100rem) rotateX(0deg) rotateY(-8deg);
-        }
+        transform: perspective(100rem) rotateX(0deg) rotateY(-8deg);
       }
 
       &:nth-child(3) {
         transition-delay: calc(var(--g-transition-delay-s) * 2);
-        .c-teaser {
-          transform: perspective(100rem) rotateX(-5deg) rotateY(6deg);
-        }
+        transform: perspective(100rem) rotateX(-5deg) rotateY(6deg);
       }
 
       &:nth-child(4) {
         transition-delay: calc(var(--g-transition-delay-s) * 3);
-        .c-teaser {
-          transform: perspective(100rem) rotateX(-2deg) rotateY(-6deg);
-        }
+        transform: perspective(100rem) rotateX(-2deg) rotateY(-6deg);
       }
 
       &:nth-child(5) {
         transition-delay: calc(var(--g-transition-delay-s) * 4);
-        .c-teaser {
-          transform: perspective(100rem) rotateX(-5deg) rotateY(5deg);
-        }
+        transform: perspective(100rem) rotateX(-5deg) rotateY(5deg);
       }
 
       &:nth-child(6) {
         transition-delay: calc(var(--g-transition-delay-s) * 5);
-        .c-teaser {
-          transform: perspective(60rem) rotateX(3deg) rotateY(-10deg);
-        }
+        transform: perspective(60rem) rotateX(3deg) rotateY(-10deg);
       }
 
       &:nth-child(even) > * {
@@ -95,4 +83,21 @@
     margin-bottom: var(--spacing-xl);
     grid-gap: 0;
   }
+}
+
+.l-section--dark {
+  --l-section--background: radial-gradient(
+    circle at top right,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+
+  padding-top: var(--g-section-space);
+  padding-bottom: var(--g-section-space);
+}
+
+.l-section--dark + .l-section--dark {
+  --l-section--background: var(--color-primary-darker-3);
+  padding-top: 0;
+  padding-bottom: calc(var(--g-section-space) / 2);
 }
