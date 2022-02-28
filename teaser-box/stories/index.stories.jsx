@@ -1,8 +1,8 @@
+import { pack } from '@kickstartds/core/lib/storybook/helpers';
+
 import TeaserBoxStories, {
   Template,
 } from '@kickstartds/base/lib/teaser-box/teaser-box.stories';
-
-import { IconSpriteDecorator } from '~/icon-sprite/src/IconSpriteDecorator';
 
 export default {
   ...TeaserBoxStories,
@@ -10,10 +10,10 @@ export default {
   parameters: {
     layout: 'centered',
   },
-  decorators: [IconSpriteDecorator],
 };
+
 export const Linked = Template.bind({});
-Linked.args = {
+Linked.args = pack({
   ratio: '16:9',
   topic: 'Lorem Ipsum',
   text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ispum dolor distinctio minima unde voluptatum aut. Lorem ipsum dolor sit amet.',
@@ -22,20 +22,20 @@ Linked.args = {
     label: 'Mehr erfahren',
     hidden: true,
   },
-};
+});
 
 export const Button = Template.bind({});
-Button.args = {
+Button.args = pack({
   ...Linked.args,
   link: {
     variant: 'solid',
     label: 'mehr erfahren',
     hidden: false,
   },
-};
+});
 
 export const Dark = Template.bind({});
-Dark.args = {
+Dark.args = pack({
   ...Linked.args,
   link: {
     variant: 'solid-inverted',
@@ -43,4 +43,4 @@ Dark.args = {
     hidden: false,
   },
   darkStyle: true,
-};
+});
