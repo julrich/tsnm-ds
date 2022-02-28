@@ -8,9 +8,16 @@ $breakpoints: (
   xl: 75em,
 );
 
-// TODO this should be changed back to:
-// @forward 'include-media/dist/include-media' with (
-@forward 'include-media' with (
+// TODO
+//
+// this one works, because the file is copied to this repo. circumvents the problem, but doesn't fix it:
+// @forward 'include-media' with (
+//
+// unfortunately, the following is not working, either (immediate plugin:vite:css error in the browser / IDE):
+// @forward '~include-media/dist/include-media' with (
+//
+// this works in the browser / IDE, and it's written like this in the normally imported file, too. Breaks on build:
+@forward 'include-media/dist/include-media' with (
   $breakpoints: $breakpoints
 );
 
