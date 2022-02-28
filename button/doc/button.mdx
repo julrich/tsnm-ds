@@ -45,14 +45,41 @@ import { Button } from '@backlight-dev/selection-inventory-n5vl9.blank-kzk2liwl"
 <Playground
   scope={{ Button }}
   code={`
-<Button icon={{icon: 'chevron-right'}} label="Solid" variant="solid" />
-<Button label="Solid (inverted)" variant="solid-inverted" />
-<Button label="Outline" variant="outline" />
-<Button label="Clear" variant="clear" />
+<Button iconAfter={true} icon={{icon: 'chevron-right'}} label="Icon right" variant="solid" />
+<Button iconBefore={true} icon={{icon: 'chevron-left'}} label="Icon left" variant="solid" />
+<hr/>
+<Button iconAfter={true} icon={{icon: 'chevron-right'}} label="Icon right" variant="solid-inverted" />
+<Button iconBefore={true} icon={{icon: 'chevron-left'}} label="Icon left" variant="solid-inverted" />
+<hr/>
+<Button iconAfter={true} icon={{icon: 'chevron-right'}} label="Icon right" variant="outline" />
+<Button iconBefore={true} icon={{icon: 'chevron-left'}} label="Icon left" variant="outline" />
+<hr/>
+<Button iconAfter={true} icon={{icon: 'chevron-right'}} label="Icon right" variant="clear" />
+<Button iconBefore={true} icon={{icon: 'chevron-left'}} label="Icon left" variant="clear" />
   `}
 />
 
-TODO add icon variants, currently icons are not working correctly in buttons (see corresponding story, too)
+## With animation
+
+<Playground
+  scope={{ Button }}
+  code={`
+<Button iconAnimation={true} iconAfter={true} icon={{icon: 'chevron-right'}} label="Icon right" variant="solid" />
+<Button iconAnimation={true} iconAfter={true} icon={{icon: 'chevron-right'}} label="Icon right" variant="solid-inverted" />
+<Button iconAnimation={true} iconAfter={true} icon={{icon: 'chevron-right'}} label="Icon right" variant="outline" />
+<Button iconAnimation={true} iconAfter={true} icon={{icon: 'chevron-right'}} label="Icon right" variant="clear" />
+<hr/>
+<Button fillAnimation={true} iconAfter={true} icon={{icon: 'chevron-right'}} label="Icon right" variant="solid" />
+<Button fillAnimation={true} iconAfter={true} icon={{icon: 'chevron-right'}} label="Icon right" variant="solid-inverted" />
+<Button fillAnimation={true} iconAfter={true} icon={{icon: 'chevron-right'}} label="Icon right" variant="outline" />
+<Button fillAnimation={true} iconAfter={true} icon={{icon: 'chevron-right'}} label="Icon right" variant="clear" />
+<hr/>
+<Button iconAnimation={true} fillAnimation={true} iconAfter={true} icon={{icon: 'chevron-right'}} label="Icon right" variant="solid" />
+<Button iconAnimation={true} fillAnimation={true} iconAfter={true} icon={{icon: 'chevron-right'}} label="Icon right" variant="solid-inverted" />
+<Button iconAnimation={true} fillAnimation={true} iconAfter={true} icon={{icon: 'chevron-right'}} label="Icon right" variant="outline" />
+<Button iconAnimation={true} fillAnimation={true} iconAfter={true} icon={{icon: 'chevron-right'}} label="Icon right" variant="clear" />
+  `}
+/>
 
 ## Props
 
