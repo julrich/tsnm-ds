@@ -1,0 +1,510 @@
+import { mdx } from '@mdx-js/react';
+import { Visual } from '../src/Visual';
+import { Props, Description } from '@divriots/dockit-react/props';
+import { Playground } from '@divriots/dockit-react/playground';
+import { Layout } from '~/mdx-layout/src/mdx-layout';
+export default Layout;
+
+# Visual
+
+<Description of={Visual} />
+
+## Usage
+
+```tsx
+import { Visual } from '@backlight-dev/selection-inventory-n5vl9.blank-kzk2liwl"';
+
+<Visual
+  height="default"
+  box={{
+    enabled: true,
+    headline: {
+      level: 'p',
+      styleAs: 'h2',
+      align: 'left',
+      content: 'Small Size',
+      spaceAfter: 'none',
+      pageHeader: false,
+    },
+    text: 'Hic maxime sed eos non. Consequatur ut qui amet accusantium nesciunt.',
+    link: {
+      enabled: true,
+      variant: 'solid-inverted',
+      label: 'Lorem Ipsum',
+      size: 'medium',
+      iconBefore: false,
+      iconAfter: false,
+      fillAnimation: false,
+      iconAnimation: false,
+      href: 'https://example.com',
+      newTab: false,
+    },
+    indent: false,
+    horizontal: 'left',
+    vertical: 'center',
+    background: 'dark',
+  }}
+  media={{
+    mode: 'image',
+    image: {
+      srcMobile:
+        'https://pbs.twimg.com/profile_banners/46692667/1622221867/1500x500',
+      srcTablet:
+        'https://pbs.twimg.com/profile_banners/46692667/1622221867/1500x500',
+      srcDesktop:
+        'https://pbs.twimg.com/profile_banners/46692667/1622221867/1500x500',
+      src: 'https://pbs.twimg.com/profile_banners/46692667/1622221867/1500x500',
+      indent: 'none',
+    },
+  }}
+/>;
+```
+
+## Sizes
+
+<Playground
+  scope={{ Visual }}
+  code={`
+<Visual
+  height="small"
+  media={{
+    mode: "image",
+    image: {
+      srcMobile: "https://pbs.twimg.com/profile_banners/46692667/1622221867/1500x500",
+      srcTablet: "https://pbs.twimg.com/profile_banners/46692667/1622221867/1500x500",
+      srcDesktop: "https://pbs.twimg.com/profile_banners/46692667/1622221867/1500x500",
+      src: "https://pbs.twimg.com/profile_banners/46692667/1622221867/1500x500",
+      indent: "none"
+    },
+  }}
+  box={{
+    enabled: true,
+    headline: {
+      level: 'p',
+      styleAs: 'h2',
+      align: 'left',
+      content: 'Size: small',
+      spaceAfter: 'none',
+      pageHeader: false,
+    },
+  }} />
+<br/>
+<Visual
+  height="default"
+  media={{
+    mode: "image",
+    image: {
+      srcMobile: "https://pbs.twimg.com/profile_banners/46692667/1622221867/1500x500",
+      srcTablet: "https://pbs.twimg.com/profile_banners/46692667/1622221867/1500x500",
+      srcDesktop: "https://pbs.twimg.com/profile_banners/46692667/1622221867/1500x500",
+      src: "https://pbs.twimg.com/profile_banners/46692667/1622221867/1500x500",
+      indent: "none"
+    },
+  }} 
+  box={{
+    enabled: true,
+    headline: {
+      level: 'p',
+      styleAs: 'h2',
+      align: 'left',
+      content: 'Size: default',
+      spaceAfter: 'none',
+      pageHeader: false,
+    },
+  }} />
+<br/>
+<Visual
+  height="fullImage"
+  media={{
+    mode: "image",
+    image: {
+      srcMobile: "https://pbs.twimg.com/profile_banners/46692667/1622221867/1500x500",
+      srcTablet: "https://pbs.twimg.com/profile_banners/46692667/1622221867/1500x500",
+      srcDesktop: "https://pbs.twimg.com/profile_banners/46692667/1622221867/1500x500",
+      src: "https://pbs.twimg.com/profile_banners/46692667/1622221867/1500x500",
+      indent: "none"
+    },
+  }} 
+  box={{
+    enabled: true,
+    headline: {
+      level: 'p',
+      styleAs: 'h2',
+      align: 'left',
+      content: 'Size: full image',
+      spaceAfter: 'none',
+      pageHeader: false,
+    },
+  }} />
+<br/><Visual
+  height="fullScreen"
+  media={{
+    mode: "image",
+    image: {
+      srcMobile: "https://pbs.twimg.com/profile_banners/46692667/1622221867/1500x500",
+      srcTablet: "https://pbs.twimg.com/profile_banners/46692667/1622221867/1500x500",
+      srcDesktop: "https://pbs.twimg.com/profile_banners/46692667/1622221867/1500x500",
+      src: "https://pbs.twimg.com/profile_banners/46692667/1622221867/1500x500",
+      indent: "none"
+    },
+  }}
+  box={{
+    enabled: true,
+    headline: {
+      level: 'p',
+      styleAs: 'h2',
+      align: 'left',
+      content: 'Size: full screen',
+      spaceAfter: 'none',
+      pageHeader: false,
+    },
+  }} />
+`}
+/>
+
+## With Video
+
+<Playground
+  scope={{ Visual }}
+  code={`
+<Visual
+  height="default"
+  media={{
+    mode: "video",
+    "video": {
+      "srcMobile": "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_2mb.mp4",
+      "srcTablet": "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_2mb.mp4",
+      "srcDesktop": "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_2mb.mp4"
+    }
+  }}
+  box={{
+    enabled: true,
+    headline: {
+      level: 'p',
+      styleAs: 'h2',
+      align: 'left',
+      content: 'Video background',
+      spaceAfter: 'none',
+      pageHeader: false,
+    },
+    text: "Shows a video as a background, instead of an image"
+  }}
+/>
+`}
+/>
+
+## Box orientations
+
+<Playground
+  scope={{ Visual }}
+  code={`
+<Visual
+  height="default"
+  media={{
+    mode: "image",
+    image: {
+      srcMobile: "https://i.ibb.co/kx4VLdQ/456754-10150983293670629-617392464-o.jpg",
+      srcTablet: "https://i.ibb.co/kx4VLdQ/456754-10150983293670629-617392464-o.jpg",
+      srcDesktop: "https://i.ibb.co/kx4VLdQ/456754-10150983293670629-617392464-o.jpg",
+      src: "https://i.ibb.co/kx4VLdQ/456754-10150983293670629-617392464-o.jpg",
+      indent: "none"
+    },
+  }}
+  box={{
+    enabled: true,
+    headline: {
+      level: 'p',
+      styleAs: 'h2',
+      align: 'left',
+      content: 'Vertical: top',
+      spaceAfter: 'none',
+      pageHeader: false,
+    },
+    text: 'Horizontal: left',
+    horizontal: 'left',
+    vertical: 'top'
+  }}
+/>
+<br/>
+<Visual
+  height="default"
+  media={{
+    mode: "image",
+    image: {
+      srcMobile: "https://i.ibb.co/kx4VLdQ/456754-10150983293670629-617392464-o.jpg",
+      srcTablet: "https://i.ibb.co/kx4VLdQ/456754-10150983293670629-617392464-o.jpg",
+      srcDesktop: "https://i.ibb.co/kx4VLdQ/456754-10150983293670629-617392464-o.jpg",
+      src: "https://i.ibb.co/kx4VLdQ/456754-10150983293670629-617392464-o.jpg",
+      indent: "none"
+    },
+  }}
+  box={{
+    enabled: true,
+    headline: {
+      level: 'p',
+      styleAs: 'h2',
+      align: 'left',
+      content: 'Vertical: top',
+      spaceAfter: 'none',
+      pageHeader: false,
+    },
+    text: 'Horizontal: center',
+    horizontal: 'center',
+    vertical: 'top'
+  }}
+/>
+<br/>
+<Visual
+  height="default"
+  media={{
+    mode: "image",
+    image: {
+      srcMobile: "https://i.ibb.co/kx4VLdQ/456754-10150983293670629-617392464-o.jpg",
+      srcTablet: "https://i.ibb.co/kx4VLdQ/456754-10150983293670629-617392464-o.jpg",
+      srcDesktop: "https://i.ibb.co/kx4VLdQ/456754-10150983293670629-617392464-o.jpg",
+      src: "https://i.ibb.co/kx4VLdQ/456754-10150983293670629-617392464-o.jpg",
+      indent: "none"
+    },
+  }}
+  box={{
+    enabled: true,
+    headline: {
+      level: 'p',
+      styleAs: 'h2',
+      align: 'left',
+      content: 'Vertical: top',
+      spaceAfter: 'none',
+      pageHeader: false,
+    },
+    text: 'Horizontal: right',
+    horizontal: 'right',
+    vertical: 'top'
+  }}
+/>
+<br/>
+<Visual
+  height="default"
+  media={{
+    mode: "image",
+    image: {
+      srcMobile: "https://i.ibb.co/kx4VLdQ/456754-10150983293670629-617392464-o.jpg",
+      srcTablet: "https://i.ibb.co/kx4VLdQ/456754-10150983293670629-617392464-o.jpg",
+      srcDesktop: "https://i.ibb.co/kx4VLdQ/456754-10150983293670629-617392464-o.jpg",
+      src: "https://i.ibb.co/kx4VLdQ/456754-10150983293670629-617392464-o.jpg",
+      indent: "none"
+    },
+  }}
+  box={{
+    enabled: true,
+    headline: {
+      level: 'p',
+      styleAs: 'h2',
+      align: 'left',
+      content: 'Vertical: center',
+      spaceAfter: 'none',
+      pageHeader: false,
+    },
+    text: 'Horizontal: left',
+    horizontal: 'left',
+    vertical: 'center'
+  }}
+/>
+<br/>
+<Visual
+  height="default"
+  media={{
+    mode: "image",
+    image: {
+      srcMobile: "https://i.ibb.co/kx4VLdQ/456754-10150983293670629-617392464-o.jpg",
+      srcTablet: "https://i.ibb.co/kx4VLdQ/456754-10150983293670629-617392464-o.jpg",
+      srcDesktop: "https://i.ibb.co/kx4VLdQ/456754-10150983293670629-617392464-o.jpg",
+      src: "https://i.ibb.co/kx4VLdQ/456754-10150983293670629-617392464-o.jpg",
+      indent: "none"
+    },
+  }}
+  box={{
+    enabled: true,
+    headline: {
+      level: 'p',
+      styleAs: 'h2',
+      align: 'left',
+      content: 'Vertical: center',
+      spaceAfter: 'none',
+      pageHeader: false,
+    },
+    text: 'Horizontal: center',
+    horizontal: 'center',
+    vertical: 'center'
+  }}
+/>
+<br/>
+<Visual
+  height="default"
+  media={{
+    mode: "image",
+    image: {
+      srcMobile: "https://i.ibb.co/kx4VLdQ/456754-10150983293670629-617392464-o.jpg",
+      srcTablet: "https://i.ibb.co/kx4VLdQ/456754-10150983293670629-617392464-o.jpg",
+      srcDesktop: "https://i.ibb.co/kx4VLdQ/456754-10150983293670629-617392464-o.jpg",
+      src: "https://i.ibb.co/kx4VLdQ/456754-10150983293670629-617392464-o.jpg",
+      indent: "none"
+    },
+  }}
+  box={{
+    enabled: true,
+    headline: {
+      level: 'p',
+      styleAs: 'h2',
+      align: 'left',
+      content: 'Vertical: center',
+      spaceAfter: 'none',
+      pageHeader: false,
+    },
+    text: 'Horizontal: right',
+    horizontal: 'right',
+    vertical: 'center'
+  }}
+/>
+<br/>
+<Visual
+  height="default"
+  media={{
+    mode: "image",
+    image: {
+      srcMobile: "https://i.ibb.co/kx4VLdQ/456754-10150983293670629-617392464-o.jpg",
+      srcTablet: "https://i.ibb.co/kx4VLdQ/456754-10150983293670629-617392464-o.jpg",
+      srcDesktop: "https://i.ibb.co/kx4VLdQ/456754-10150983293670629-617392464-o.jpg",
+      src: "https://i.ibb.co/kx4VLdQ/456754-10150983293670629-617392464-o.jpg",
+      indent: "none"
+    },
+  }}
+  box={{
+    enabled: true,
+    headline: {
+      level: 'p',
+      styleAs: 'h2',
+      align: 'left',
+      content: 'Vertical: bottom',
+      spaceAfter: 'none',
+      pageHeader: false,
+    },
+    text: 'Horizontal: left',
+    horizontal: 'left',
+    vertical: 'bottom'
+  }}
+/>
+<br/>
+<Visual
+  height="default"
+  media={{
+    mode: "image",
+    image: {
+      srcMobile: "https://i.ibb.co/kx4VLdQ/456754-10150983293670629-617392464-o.jpg",
+      srcTablet: "https://i.ibb.co/kx4VLdQ/456754-10150983293670629-617392464-o.jpg",
+      srcDesktop: "https://i.ibb.co/kx4VLdQ/456754-10150983293670629-617392464-o.jpg",
+      src: "https://i.ibb.co/kx4VLdQ/456754-10150983293670629-617392464-o.jpg",
+      indent: "none"
+    },
+  }}
+  box={{
+    enabled: true,
+    headline: {
+      level: 'p',
+      styleAs: 'h2',
+      align: 'left',
+      content: 'Vertical: bottom',
+      spaceAfter: 'none',
+      pageHeader: false,
+    },
+    text: 'Horizontal: center',
+    horizontal: 'center',
+    vertical: 'bottom'
+  }}
+/>
+<br/>
+<Visual
+  height="default"
+  media={{
+    mode: "image",
+    image: {
+      srcMobile: "https://i.ibb.co/kx4VLdQ/456754-10150983293670629-617392464-o.jpg",
+      srcTablet: "https://i.ibb.co/kx4VLdQ/456754-10150983293670629-617392464-o.jpg",
+      srcDesktop: "https://i.ibb.co/kx4VLdQ/456754-10150983293670629-617392464-o.jpg",
+      src: "https://i.ibb.co/kx4VLdQ/456754-10150983293670629-617392464-o.jpg",
+      indent: "none"
+    },
+  }}
+  box={{
+    enabled: true,
+    headline: {
+      level: 'p',
+      styleAs: 'h2',
+      align: 'left',
+      content: 'Vertical: bottom',
+      spaceAfter: 'none',
+      pageHeader: false,
+    },
+    text: 'Horizontal: right',
+    horizontal: 'right',
+    vertical: 'bottom'
+  }}
+/>
+<br/>
+`}
+/>
+
+## With CTA
+
+<Playground
+  scope={{ Visual }}
+  code={`
+<Visual
+  height="default"
+  box={{
+    enabled: true,
+    headline: {
+      level: 'p',
+      styleAs: 'h2',
+      align: 'left',
+      content: 'Small Size',
+      spaceAfter: 'none',
+      pageHeader: false,
+    },
+    text: 'Hic maxime sed eos non. Consequatur ut qui amet accusantium nesciunt.',
+    link: {
+      enabled: true,
+      variant: 'solid-inverted',
+      label: 'Lorem Ipsum',
+      size: 'medium',
+      iconBefore: false,
+      iconAfter: false,
+      fillAnimation: false,
+      iconAnimation: false,
+      href: 'https://example.com',
+      newTab: false,
+    },
+    indent: false,
+    horizontal: 'left',
+    vertical: 'center',
+    background: 'dark',
+  }}
+  media={{
+    mode: 'image',
+    image: {
+      srcMobile:
+        'https://pbs.twimg.com/profile_banners/46692667/1622221867/1500x500',
+      srcTablet:
+        'https://pbs.twimg.com/profile_banners/46692667/1622221867/1500x500',
+      srcDesktop:
+        'https://pbs.twimg.com/profile_banners/46692667/1622221867/1500x500',
+      src: 'https://pbs.twimg.com/profile_banners/46692667/1622221867/1500x500',
+      indent: 'none',
+    },
+  }}
+/>
+`}
+/>
+
+## Props
+
+<Props of={Visual} />
