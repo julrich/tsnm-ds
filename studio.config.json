@@ -9,6 +9,13 @@
     ]
    ],
    [
+    "LAYOUT",
+    [
+     "header",
+     "footer"
+    ]
+   ],
+   [
     "COMPONENTS",
     [
      "button",
@@ -19,13 +26,15 @@
      "track-teaser-box",
      "visual",
      "text-media",
-     "storytelling"
+     "storytelling",
+     "link-button"
     ]
    ],
    [
     "INFRASTRUCTURE",
     [
-     "mdx-layout"
+     "mdx-layout",
+     "chakra-theme"
     ]
    ]
   ]

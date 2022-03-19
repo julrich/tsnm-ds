@@ -1,8 +1,13 @@
 import React from 'react';
 import { MDXProvider } from '@mdx-js/react';
-import { CoreLayout } from '@divriots/dockit-react/mdx-layout-core';
+
+import { extendTheme, ChakraProvider } from '@chakra-ui/react';
 
 import { IconSprite } from '~/icon-sprite/src/IconSprite';
+import { Header } from '~/header/src/Header';
+import { Footer } from '~/footer/src/Footer';
+
+import theme from '../../chakra-theme/src/theme';
 
 import '@divriots/dockit-react/style.css';
 import '~/mdx-layout/src/styleshowcase.css';
@@ -15,23 +20,12 @@ import '@kickstartds/base/lib/global/base.css';
 import '~/colors/src/tokens.css';
 
 export const Layout = (props) => (
-  <MDXProvider>
-    <IconSprite />
-    <CoreLayout
-      logo={
-        <div className="logo">
-          <img
-            className="logo__image"
-            src="https://i1.sndcdn.com/avatars-000003159261-cat82d-t200x200.jpg"
-          />
-          <span className="logo__text">Personal homepage of TSNM</span>
-        </div>
-      }
-      {...props}
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.css"
-    />
-  </MDXProvider>
+  <ChakraProvider theme={theme}>
+    <MDXProvider>
+      <IconSprite />
+      <Header />
+      <main>{props.children}</main>
+      <Footer />
+    </MDXProvider>
+  </ChakraProvider>
 );
