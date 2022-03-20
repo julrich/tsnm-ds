@@ -63,6 +63,9 @@ const SocialButton = ({
   );
 };
 
+/**
+  The Footer component is used to display global navigation
+*/
 export const Footer = () => {
   return (
     <Box
