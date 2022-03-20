@@ -1,3 +1,4 @@
+import * as React from 'react';
 import {
   Box,
   chakra,
@@ -9,7 +10,6 @@ import {
   VisuallyHidden,
 } from '@chakra-ui/react';
 import { FaTwitter, FaYoutube, FaTwitch, FaGithub } from 'react-icons/fa';
-import { ReactNode } from 'react';
 
 const Logo = (props: any) => {
   return (
@@ -36,7 +36,7 @@ const SocialButton = ({
   label,
   href,
 }: {
-  children: ReactNode;
+  children: React.ReactNode;
   label: string;
   href: string;
 }) => {
