@@ -50,6 +50,9 @@ const NavLink = ({ children, href }: { children: ReactNode; href: string }) => (
   </Link>
 );
 
+/**
+  The Header component is used to display global navigation
+*/
 export const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 

@@ -6,6 +6,7 @@ import { extendTheme, ChakraProvider } from '@chakra-ui/react';
 import { IconSprite } from '~/icon-sprite/src/IconSprite';
 import { Header } from '~/header/src/Header';
 import { Footer } from '~/footer/src/Footer';
+import { Section } from '~/section/src/Section';
 
 import theme from '../../chakra-theme/src/theme';
 
@@ -24,7 +25,9 @@ export const Layout = (props) => (
     <MDXProvider>
       <IconSprite />
       <Header />
-      <main>{props.children}</main>
+      <Section>
+        <main>{props.children}</main>
+      </Section>
       <Footer />
     </MDXProvider>
   </ChakraProvider>
