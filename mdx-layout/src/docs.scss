@@ -14,3 +14,35 @@
     font-weight: bold;
   }
 }
+
+.live-preview {
+  background-color: var(--color-white);
+
+  > div {
+    font-size: 12px;
+    > * {
+      margin-right: 1rem;
+    }
+  }
+}
+
+main .language-tsx,
+.live-editor {
+  margin-bottom: 3rem;
+}
+
+main {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font: var(--g-headline--font);
+  }
+
+  pre,
+  textarea {
+    font-size: 12px;
+  }
+}
