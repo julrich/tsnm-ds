@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import * as React from 'react';
 import {
   Box,
   Flex,
@@ -35,7 +35,7 @@ const Links = [
   },
 ];
 
-const NavLink = ({ children, href }: { children: ReactNode; href: string }) => (
+const NavLink = ({ children, href }: { children: React.ReactNode; href: string }) => (
   <Link
     px={2}
     py={1}
