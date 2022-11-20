@@ -1,1 +1,5 @@
 node_modules/
+
+# generated kickstartDS token files
+token/src/tokens.css
+token/src/icons/IconSprite.js
