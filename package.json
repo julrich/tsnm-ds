@@ -6,7 +6,9 @@
   "type": "module",
   "homepage": "{{ homepage }}",
   "scripts": {
-    "serve": "npx backlight@latest serve eqcWzgOoYUerJev6X25c --open"
+    "serve": "npx backlight@latest serve eqcWzgOoYUerJev6X25c --open",
+    "build-tokens": "kickstartDS tokens compile --token-dictionary-path token/src/dictionary",
+    "init-tokens": "kickstartDS tokens init --branding-token-path token/src/branding-token.json --token-dictionary-path token/src/dictionary"
   },
   "devDependencies": {
     "@divriots/dockit-react": "^0.0.84",
@@ -15,12 +17,13 @@
   "dependencies": {
     "@chakra-ui/icons": "^1.1.7",
     "@chakra-ui/react": "^1.8.6",
-    "@kickstartds/core": "^1.6.0-next.9",
-    "@kickstartds/base": "^1.6.0-next.9",
-    "@kickstartds/blog": "^1.6.0-next.9",
-    "@kickstartds/content": "^1.6.0-next.9",
+    "@kickstartds/core": "^2.0.2",
+    "@kickstartds/base": "^2.0.2",
+    "@kickstartds/blog": "^2.0.2",
+    "@kickstartds/content": "2.0.0--canary.5.14.0",
     "classnames": "^2.3.1",
     "include-media": "^1.4.10",
+    "kickstartds": "^1.0.0",
     "react": "^17.0.2",
     "react-card-flip": "^1.1.5",
     "react-dom": "^17.0.2",

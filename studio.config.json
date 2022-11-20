@@ -1,42 +1,42 @@
 {
- "packages": {
-  "dir": "",
-  "menu": [
-   [
-    "TOKENS",
-    [
-     "colors"
+  "packages": {
+    "dir": "",
+    "menu": [
+      [
+        "TOKENS",
+        [
+          "colors",
+          "token"
+        ]
+      ],
+      [
+        "LAYOUT",
+        [
+          "header",
+          "footer"
+        ]
+      ],
+      [
+        "COMPONENTS",
+        [
+          "button",
+          "teaser-box",
+          "test",
+          "section",
+          "icon-sprite",
+          "track-teaser-box",
+          "visual",
+          "text-media",
+          "storytelling"
+        ]
+      ],
+      [
+        "INFRASTRUCTURE",
+        [
+          "mdx-layout",
+          "chakra-theme"
+        ]
+      ]
     ]
-   ],
-   [
-    "LAYOUT",
-    [
-     "header",
-     "footer"
-    ]
-   ],
-   [
-    "COMPONENTS",
-    [
-     "button",
-     "teaser-box",
-     "test",
-     "section",
-     "icon-sprite",
-     "track-teaser-box",
-     "visual",
-     "text-media",
-     "storytelling",
-     "link-button"
-    ]
-   ],
-   [
-    "INFRASTRUCTURE",
-    [
-     "mdx-layout",
-     "chakra-theme"
-    ]
-   ]
-  ]
- }
+  }
 }
