@@ -7,8 +7,8 @@
   "homepage": "{{ homepage }}",
   "scripts": {
     "serve": "npx backlight@latest serve eqcWzgOoYUerJev6X25c --open",
-    "build-tokens": "kickstartDS tokens compile",
-    "init-tokens": "kickstartDS tokens init"
+    "build-tokens": "kickstartDS tokens compile --token-dictionary-path token/src/dictionary",
+    "init-tokens": "kickstartDS tokens init --branding-token-path token/src/branding-token.json --token-dictionary-path token/src/dictionary"
   },
   "devDependencies": {
     "@divriots/dockit-react": "^0.0.84",
