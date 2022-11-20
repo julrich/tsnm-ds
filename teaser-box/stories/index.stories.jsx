@@ -12,6 +12,7 @@ export default {
   },
   decorators: [IconSpriteDecorator],
 };
+
 export const Linked = Template.bind({});
 Linked.args = {
   ratio: '16:9',
@@ -19,7 +20,7 @@ Linked.args = {
   text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ispum dolor distinctio minima unde voluptatum aut. Lorem ipsum dolor sit amet.',
   link: {
     variant: 'solid',
-    label: 'Mehr erfahren',
+    label: 'Learn more',
     hidden: true,
   },
 };
@@ -29,7 +30,7 @@ Button.args = {
   ...Linked.args,
   link: {
     variant: 'solid',
-    label: 'mehr erfahren',
+    label: 'Learn more',
     hidden: false,
   },
 };
@@ -39,8 +40,8 @@ Dark.args = {
   ...Linked.args,
   link: {
     variant: 'solid-inverted',
-    label: 'mehr erfahren',
+    label: 'Learn more',
     hidden: false,
   },
-  darkStyle: true,
+  inverted: true,
 };

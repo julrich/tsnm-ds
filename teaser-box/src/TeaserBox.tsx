@@ -15,8 +15,8 @@ export type TeaserBoxProps = KDSTeaserBoxProps;
 export const TeaserBox = ({
   topic = 'Lorem ipsum',
   text = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ispum dolor distinctio minima unde voluptatum aut. Lorem ipsum dolor sit amet.',
-  darkStyle = false,
+  inverted = false,
   ...rest
 }: KDSTeaserBoxProps) => (
-  <KDSTeaserBox topic={topic} text={text} darkStyle={darkStyle} {...rest} />
+  <KDSTeaserBox topic={topic} text={text} inverted={inverted} {...rest} />
 );

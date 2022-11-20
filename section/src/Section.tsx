@@ -5,7 +5,7 @@ import {
   SectionContextDefault,
   SectionProps as KDSSectionProps,
 } from '@kickstartds/base/lib/section';
-import { Button } from '@kickstartds/base/lib/button';
+import { Button } from '~/button/src/Button';
 import './SectionSlider.js';
 
 import './_section.scss';

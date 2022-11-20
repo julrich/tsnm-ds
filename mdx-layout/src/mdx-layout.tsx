@@ -25,7 +25,7 @@ export const Layout = (props) => (
     <MDXProvider>
       <IconSprite />
       <Header />
-      <Section>
+      <Section width="default" background="default">
         <main>{props.children}</main>
       </Section>
       <Footer />

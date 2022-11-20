@@ -18,7 +18,7 @@ import {
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon, AtSignIcon } from '@chakra-ui/icons';
 
-import { LinkButton } from '~/link-button/src/LinkButton';
+import { Button as KDSButton } from '~/button/src/Button';
 
 const Links = [
   {
@@ -35,7 +35,13 @@ const Links = [
   },
 ];
 
-const NavLink = ({ children, href }: { children: React.ReactNode; href: string }) => (
+const NavLink = ({
+  children,
+  href,
+}: {
+  children: React.ReactNode;
+  href: string;
+}) => (
   <Link
     px={2}
     py={1}
@@ -96,7 +102,7 @@ export const Header = () => {
             </HStack>
           </HStack>
           <Flex alignItems={'center'}>
-            <LinkButton
+            <KDSButton
               iconBefore={true}
               icon={{ icon: 'twitter', role: 'icon' }}
               variant="outline"
