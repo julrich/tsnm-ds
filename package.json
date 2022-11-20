@@ -6,7 +6,9 @@
   "type": "module",
   "homepage": "{{ homepage }}",
   "scripts": {
-    "serve": "npx backlight@latest serve eqcWzgOoYUerJev6X25c --open"
+    "serve": "npx backlight@latest serve eqcWzgOoYUerJev6X25c --open",
+    "build-tokens": "kickstartDS tokens compile",
+    "init-tokens": "kickstartDS tokens init"
   },
   "devDependencies": {
     "@divriots/dockit-react": "^0.0.84",
@@ -21,6 +23,7 @@
     "@kickstartds/content": "2.0.0--canary.5.14.0",
     "classnames": "^2.3.1",
     "include-media": "^1.4.10",
+    "kickstartds": "^1.0.0",
     "react": "^17.0.2",
     "react-card-flip": "^1.1.5",
     "react-dom": "^17.0.2",
